@@ -20,8 +20,8 @@ def number_of_ways(startpos: int, endpos: int, k: int) -> int:
 
     # loop k times
     for i in tqdm(range(k)):
-        for path in paths:
-            new_path = path.copy()
+        for _ in range(len(paths)):
+            new_path = paths.pop(0)
             last_position = new_path[-1]
 
             # exist fast if not going to make to end
@@ -31,7 +31,7 @@ def number_of_ways(startpos: int, endpos: int, k: int) -> int:
             new_path_left = new_path + [last_position - 1]
 
             # path that goes to the right
-            new_path_right = new_path + [last_position - 1]
+            new_path_right = new_path + [last_position + 1]
 
             # add paths to the left and right
             paths.append(new_path_left)
