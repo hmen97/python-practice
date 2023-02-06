@@ -1,0 +1,8 @@
+name: vscodefundamentals
+channels:
+  - defaults
+dependencies:
+  - python=3.8
+  - matplotlib
+  - pylint
+prefix: /home/herman/miniconda3/envs/vscodefundamentals
