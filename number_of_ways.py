@@ -16,7 +16,7 @@ def number_of_ways(startpos: int, endpos: int, k: int) -> int:
     perform exactly k steps.
     """
     # start with path of length 1
-    paths = [startpos]
+    paths = [[startpos]]
 
     # loop k times
     for i in tqdm(range(k)):
