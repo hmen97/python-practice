@@ -25,7 +25,7 @@ def number_of_ways(startpos: int, endpos: int, k: int) -> int:
             last_position = new_path[-1]
 
             # exist fast if not going to make to end
-            if endpos - last_position > (k - i - 1):
+            if endpos - last_position > (k - i):
                 continue
             # path that goes to the left
             new_path_left = new_path + [last_position - 1]
@@ -40,7 +40,7 @@ def number_of_ways(startpos: int, endpos: int, k: int) -> int:
     num_ways = 0
     for path in paths:
         if path[-1] == endpos:
-            new_ways += 1
+            num_ways += 1
     return num_ways
 
 
